@@ -23,7 +23,7 @@ function App() {
       // document.title="Dark Mode";
 
       setInterval(() => {
-        document.title = "SIT - Admission"
+        document.title = "SIT - text-mechanic"
       }, 2000);
 
       setInterval(() => {
