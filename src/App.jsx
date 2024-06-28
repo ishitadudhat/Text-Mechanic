@@ -8,7 +8,7 @@ function App() {
 
   const [mode, setMode] = useState('light');
 
-  const [btnText, newBtnText] = useState('Enable Light Mode');
+  const [btnText, newBtnText] = useState('Enable Dark  Mode');
 
   const [alert, setAlert] = useState(null);
 
@@ -19,16 +19,16 @@ function App() {
       document.body.style.color = 'white';
       // setMyText("Enable Light Mode");
       showAlert("Dark Mode Has Been Enable", "success")
-      newBtnText('Enable Dark Mode');
+      newBtnText('Enable Light Mode');
       // document.title="Dark Mode";
 
-      setInterval(() => {
-        document.title = "SIT - text-mechanic"
-      }, 2000);
+      // setInterval(() => {
+      //   document.title = "SIT - text-mechanic"
+      // }, 2000);
 
-      setInterval(() => {
-        document.title = "SIT - Bsc.IT"
-      }, 1500);
+      // setInterval(() => {
+      //   document.title = "SIT - Bsc.IT"
+      // }, 1500);
 
     } else {
       setMode('light');
@@ -36,8 +36,8 @@ function App() {
       document.body.style.color = 'black';
       // setMyText("Enable Dark Mode");
       showAlert("Light Mode Has Been Enable", "success");
-      newBtnText('Enable Light Mode');
-      document.title="Light Mode";
+      newBtnText('Enable Dark Mode');
+      // document.title="Light Mode";
     }
   }
 
@@ -57,9 +57,9 @@ function App() {
   return (
     <>
     
-      <Navbar title="SIT" aboutText="Contact Us" mode={mode} toggleMode={toggleMode} btnText={btnText} />
+      <Navbar title="Text Mechanic" aboutText="Contact Us" mode={mode} toggleMode={toggleMode} btnText={btnText} />
       <Alert alert={alert} />
-      <TextForm heading="Enter Text to Analyse Below" mode={mode} toggleMode={toggleMode} showAlert={showAlert}/>
+      <TextForm heading="Repair Your Text Here" mode={mode} toggleMode={toggleMode} showAlert={showAlert}/>
       
     </>
   );
